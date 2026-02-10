@@ -125,3 +125,38 @@ if uploaded_file is not None:
 
 else:
     st.info("Lütfen bir CSV dosyası yükleyin.")
+
+# ===============================
+# 9. ANALİTİK ÇIKARIMLAR
+# ===============================
+
+st.subheader("🧠 Analitik Çıkarımlar")
+
+# En yüksek maaşlı departmanı bul
+top_department = dev_salary.idxmax()
+top_salary = dev_salary.max()
+
+insight_text = f"""
+📌 **Veri analizine göre en yüksek ortalama maaşa sahip departman:**  
+**{top_department}** (${top_salary:,.0f})
+
+Bu sonuç, günümüz teknoloji ekosisteminde **kodlama ve programlama becerilerinin**
+stratejik önemini açıkça göstermektedir.
+
+Özellikle yazılım geliştirme ve yapay zeka alanları:
+
+• Yüksek ekonomik değer üretmektedir  
+• Küresel iş gücü piyasasında güçlü talep görmektedir  
+• Veri odaklı karar verme süreçlerinin merkezindedir
+
+Yapay zeka ile entegre çalışan programlama becerileri, yalnızca teknik bir
+yetkinlik değil; aynı zamanda **geleceğin mesleklerinde rekabet avantajı**
+sağlayan kritik bir yetkinliktir.
+
+Bu analiz, teknoloji odaklı kariyer planlamasında **AI ve yazılım
+uzmanlıklarının uzun vadede sürdürülebilir ve yüksek getirili alanlar**
+olduğunu göstermektedir.
+"""
+
+st.markdown(insight_text)
+
