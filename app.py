@@ -2,15 +2,26 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
+import streamlit as st
 
 # ===============================
 # 1. VERİYİ YÜKLEME
 # ===============================
 
-file_path = "survey_results_public.csv"
-df = pd.read_csv(file_path, low_memory=False)
 
-print("Veri seti boyutu:", df.shape)
+
+st.title("📊 Veri Analizi")
+
+uploaded_file = st.file_uploader("CSV dosyanı yükle", type="csv")
+
+if uploaded_file is not None:
+    df = pd.read_csv(uploaded_file, low_memory=False)
+
+    st.write("Veri başarıyla yüklendi!")
+    st.dataframe(df.head())
+
+else:
+    st.warning("Lütfen bir CSV dosyası yükleyin.")
 
 # ===============================
 # 2. VERİ TEMİZLEME
