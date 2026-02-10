@@ -3,6 +3,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 import streamlit as st
+import os
+st.write(os.listdir())
+
 
 # ===============================
 # 1. VERİYİ YÜKLEME
