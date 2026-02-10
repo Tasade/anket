@@ -3,6 +3,9 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import streamlit as st
 
+st.title("🔥 YENİ VERSİYON ÇALIŞIYOR 🔥")
+
+
 st.title("📊 Veri Analizi Dashboard")
 
 uploaded_file = st.file_uploader("CSV dosyanı yükle", type="csv")
